@@ -60,7 +60,7 @@ class CNN(nn.Module):
     x = self.fc3(x)
     handw = h/w
     #print(handw)
-    handw = torch.unsqueeze(torch.tensor(handw),1)
+    handw = torch.unsqueeze(torch.unsqueeze(torch.tensor(handw).to(device),0),1)
     #print(x.shape, w.shape, h.shape)
     x = torch.cat((x,handw),dim=1)
     #print(x.shape)
