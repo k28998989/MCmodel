@@ -2,10 +2,8 @@ import torch.nn as nn
 import torch
 
 import os
-import torch.nn.functional as F
-from collections import OrderedDict
-from torchvision.models.swin_transformer import swin_b, Swin_B_Weights
 
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 model_urls = {
     'cnn': 'https://github.com/k28998989/MCmodel/releases/download/v1/dir_model.pt'
