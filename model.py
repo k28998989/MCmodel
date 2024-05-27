@@ -8,7 +8,7 @@ from torchvision.models.swin_transformer import swin_b, Swin_B_Weights
 
 
 model_urls = {
-    'cnn': 'https://github.com/k28998989/MC/tree/main/models/cnn_model_93_1_65.pt'
+    'cnn': 'https://github.com/k28998989/MCmodel/releases/download/v1/dir_model.pt'
 }
 class CNN(nn.Module):
   def __init__(self, num_classes: int):
@@ -69,10 +69,13 @@ class CNN(nn.Module):
  
 def cnn():
     model = CNN(8)
-        
-    model = torch.load("./models/cnn_model_93_1_65.pt")
+    model.load_state_dict(torch.hub.load_state_dict_from_url(model_urls['cnn']))
+    #model = torch.load("./models/cnn_model_93_1_65.pt")
+    #torch.save(model.state_dict(), "./models/dir_model.pt")
 
     
 
     return model
+
+
 
