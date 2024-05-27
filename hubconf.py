@@ -1,2 +1,2 @@
 dependencies = ['torch']
-from model import cnn
+from model.py import cnn
