@@ -68,10 +68,7 @@ class CNN(nn.Module):
 def cnn():
     model = CNN(8)
     model.load_state_dict(torch.hub.load_state_dict_from_url(model_urls['cnn']))
-    #model = torch.load("./models/cnn_model_93_1_65.pt")
-    #torch.save(model.state_dict(), "./models/dir_model.pt")
-
-    
+       
 
     return model
 
