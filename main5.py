@@ -16,9 +16,7 @@ EPOCH = 50
 MODELS_PATH = './models'
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 print(device)
-model_urls = {
-    'cnn': 'https://github.com/k28998989/MC/tree/main/models/cnn_model_93_1_65.pt'
-}
+
 train_transform = torchvision.transforms.Compose([
     # torchvision.transforms.RandomCrop(32, 4),
     # torchvision.transforms.RandomHorizontalFlip(),
