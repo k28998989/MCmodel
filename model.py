@@ -72,8 +72,7 @@ def cnn():
         
     model = torch.load("./models/cnn_model_93_1_65.pt")
 
-    if print_net:
-        print(model)
+    
 
     return model
 
